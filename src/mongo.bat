@@ -1,0 +1,1 @@
+mongod --dbpath="D://program files/MongoDB/data" --port 27017

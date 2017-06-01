@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频播放器</title>
+	<meta content="IE=8" http-equiv="X-UA_Compatible">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<script type="text/javascript">
+		function getVideo(file_id){
+			if(file_id=="")
+				return;
+			var player = new qcVideo.Player("id_video_container", {
+					    "file_id": file_id,
+					    "app_id": "1252591141",
+					    "width":640,
+					    "height":480,
+					    "remember":1
+					});
+				var barrage = [
+						{
+							"type":"content", 
+							"content":"hello world", 
+							"time":"1"
+						},
+						{
+							"type":"content", 
+							"content":"居中显示", 
+							"time":"1", 
+							"style":"C64B03;30",
+							"position":"center"
+						}
+					];
+				player.addBarrage(barrage);
+		}
+	</script>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='news.css') }}">
+</head>
+<body style="text-align:center">
+	<div class='ribbon'>
+		<a href="{{ url_for('hello') }}"><span>首页</span></a>
+		<a href="{{ url_for('news') }}"><span>新闻</span></a>
+		<a href="{{ url_for('jokes') }}"><span>笑话</span></a>
+		<a href="{{ url_for('video') }}"><span>视频</span></a>
+		<a href="{{ url_for('test') }}"><span>关于</span></a>
+	</div>
+	<div style="display:table;margin:0 auto;border: white 2px solid;width: 1300px;height: 510px;text-align: center;">
+		<div style="display: table-row;">
+			<h2>视频</h2>
+		</div>
+		<br>
+		<div style="margin:0 auto;">
+			<form action="/select" method="post" name="video_form">
+			<label>请选择：</label>
+			<select name="videos">
+				<option name="video" value="9031868222909265908">迪迦奥特曼新主题曲MV</option>
+				<option name="video" value="9031868222909266148">火影忍者主题曲《青鸟》</option>
+				<option name="video" value="9031868222909260468">《青春修炼手册》凯特琳 杨洪基</option>
+				<option name="video" value="9031868222909260754">《无地自容》周晓欧</option>
+				<option name="video" value="9031868222909840094">甩词歌 甩动2010</option>
+				<option name="video" value="9031868222909840245">东来东往《不一样的美男子》</option>
+				<option name="video" value="9031868222909840522">羽泉、邓超《奔跑》《冷酷到底》</option>
+			</select>
+			<input type="submit" value="确定">
+		</form>
+	
+		<script src="//qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8">
+			
+		</script>
+		<div id="id_video_container" style="width:100%; height:auto;">
+			
+		</div>
+		<script type="text/javascript">
+			getVideo("{{result}}");
+		</script>
+		</div>
+	</div>
+	
+</body>
+</html>
