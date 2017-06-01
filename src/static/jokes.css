@@ -1,0 +1,176 @@
+*{ 
+	/* Basic CSS reset */
+	margin:0; 
+	padding:0;
+}
+
+body {
+	/* These styles have nothing to do with the ribbon */
+	/*background:url(dark_wood.png) 0 0 repeat;*/
+	background: #C0B7FF;
+	padding:35px 0 0;
+	margin:auto;
+	text-align:center;
+}
+
+.ribbon {
+	display:inline-block;
+}
+
+.ribbon:after, .ribbon:before {
+	margin-top:0.5em;
+	content: "";
+	float:left;
+	border:1.5em solid #fff;
+}
+
+.ribbon:after {
+	border-right-color:transparent;
+}
+
+.ribbon:before {
+	border-left-color:transparent;
+}
+
+.ribbon a:link, .ribbon a:visited { 
+	color:#000;
+	text-decoration:none;
+    float:left;
+    height:3.5em;
+	overflow:hidden;
+}
+
+.ribbon span {
+	background:#fff;
+	display:inline-block;
+	line-height:3em;
+	padding:0 1em;
+	margin-top:0.5em;
+	position:relative;
+
+	-webkit-transition: background-color 0.2s, margin-top 0.2s;  /* Saf3.2+, Chrome */
+	-moz-transition: background-color 0.2s, margin-top 0.2s;  /* FF4+ */
+	-ms-transition: background-color 0.2s, margin-top 0.2s;  /* IE10 */
+	-o-transition: background-color 0.2s, margin-top 0.2s;  /* Opera 10.5+ */
+	transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+	background:#FFD204;
+	margin-top:0;
+}
+
+.ribbon span:before {
+	content: "";
+	position:absolute;
+	top:3em;
+	left:0;
+	border-right:0.5em solid #9B8651;
+	border-bottom:0.5em solid #fff;
+}
+
+.ribbon span:after {
+	content: "";
+	position:absolute;
+	top:3em;
+	right:0;
+	border-left:0.5em solid #9B8651;
+	border-bottom:0.5em solid #fff;
+}
+
+
+/* Basic Grey */
+.basic-grey-jokes {
+margin-left:auto;
+margin-right:auto;
+max-width: 700px;
+background: #F7F7F7;
+padding: 25px 15px 25px 10px;
+font: 12px Georgia, "Times New Roman", Times, serif;
+color: #888;
+text-shadow: 1px 1px 1px #FFF;
+border:1px solid #E4E4E4;
+}
+.basic-grey-jokes h1 {
+
+}
+.basic-grey-jokes div {
+color: #888;
+display: block;
+font-size: 17px;
+margin: -10px 15px 10px 10px;
+padding: 0 0 0 10px;
+}
+.basic-grey-jokes div>div {
+color: #888;
+display: block;
+font-size: 17px;
+margin: -10px 15px 10px 10px;
+padding: 0 0 0 10px;
+}
+.basic-grey-jokes div>div>div {
+color: #888;
+display: block;
+font-size: 17px;
+margin: 5px 15px 10px 10px;
+padding: 0 0 0 10px;
+}
+.basic-grey-jokes div>div {
+color: #888;
+display: block;
+font-size: 17px;
+margin: -10px 15px 10px 10px;
+padding: 0 0 0 10px;
+}
+.basic-grey-jokes h1>span {
+display: block;
+font-size: 11px;
+}
+.basic-grey-jokes label {
+display: block;
+margin: 0px;
+}
+.basic-grey-jokes label>span {
+float: left;
+width: 10%;
+text-align: right;
+padding-right: 10px;
+margin-top: 10px;
+color: #888;
+}
+.basic-grey-jokes input[type="text"], .basic-grey-jokes textarea {
+border: 1px solid #DADADA;
+color: #888;
+height: 30px;
+margin-bottom: 8px;
+margin-right: auto;
+margin-top: 2px;
+outline: 0 none;
+padding: 3px 3px 3px 5px;
+width: 80%;
+font-size: 12px;
+line-height:15px;
+box-shadow: inset 0px 1px 4px #ECECEC;
+-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey-jokes textarea{
+padding: 5px 3px 3px 5px;
+}
+
+.basic-grey-jokes textarea{
+height:40px;
+}
+.basic-grey-jokes .button {
+background: #E27575;
+border: none;
+padding: 5px 12px 5px 12px;
+color: #FFF;
+box-shadow: 1px 1px 5px #B6B6B6;
+border-radius: 3px;
+text-shadow: 1px 1px 1px #9E3F3F;
+cursor: pointer;
+}
+.basic-grey-jokes .button:hover {
+background: #CF7A7A
+}

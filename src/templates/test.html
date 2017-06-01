@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+	<div class='ribbon'>
+		<a href="{{ url_for('hello') }}"><span>首页</span></a>
+		<a href="{{ url_for('news') }}"><span>新闻</span></a>
+		<a href="{{ url_for('jokes') }}"><span>笑话</span></a>
+		<a href="{{ url_for('test') }}"><span>关于</span></a>
+	</div>
+	<div style="display:table;margin:0 auto;border: white 2px solid;width: 1300px;height: 510px;text-align: center;">
+		<div style="display:table-cell;vertical-align: middle;">
+			<h1>这里是测试</h1>
+		</div>
+		{{testData}}
+	</div>
+
+	
+</body>
+</html>

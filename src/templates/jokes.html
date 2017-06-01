@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>笑话</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='jokes.css') }}">
+</head>
+<body>
+	<div class='ribbon'>
+		<a href="{{ url_for('hello') }}"><span>首页</span></a>
+		<a href="{{ url_for('news') }}"><span>新闻</span></a>
+		<a href="{{ url_for('jokes') }}"><span>笑话</span></a>
+		<a href="{{ url_for('video') }}"><span>视频</span></a>
+		<a href="{{ url_for('test') }}"><span>关于</span></a>
+	</div>
+	<div style="display:table;margin:0 auto;border: white 2px solid;width: 1300px;height: 510px;">
+		<div style="display: table-row;">
+			<h2>笑话</h2>
+		</div>
+		<br>
+		<div style="text-align: left;display: table-row;">
+				{{ jokesData|safe }}
+		</div>
+		
+	</div>
+	
+</body>
+</html>
